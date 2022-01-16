@@ -78,10 +78,11 @@ body {
   overflow: hidden;
   height: 50vw;
   background: #EFD2CB;
+  box-shadow: inset 0em 0em 3em black;
 }
 
 .images_scroll img {
-  max-width: 100%;
+  width: 50%;
   vertical-align: middle;
   box-sizing: border-box;
   transition: opacity 0.2s;
@@ -120,6 +121,46 @@ body {
     -webkit-transform: translateY(var(--direction, -50%));
     transform: translateY(var(--direction, -50%));
   }
+}
+.projects_section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.thumbnail_project {
+  width: 30%;
+  background-color: #8B687F;
+  height: 30em;
+  border-radius: 2%;
+  position: relative;
+}
+.thumbnail_project p {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-family: decoy, serif;
+  font-weight: thin;
+  font-style: normal;
+  padding: 2%;
+  text-align: center;
+}
+
+.poke {
+  background-image: url(src/jspokeapi.JPG);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bap {
+  background-image: url(src/jspokeapi.JPG);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.devlab {
+  background-image: url(src/jspokeapi.JPG);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */
