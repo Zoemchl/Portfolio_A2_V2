@@ -125,11 +125,12 @@ body {
 .projects_section {
   display: flex;
   justify-content: space-around;
+  padding: 5%;
 }
 
 .thumbnail_project {
-  width: 30%;
   background-color: #8B687F;
+  width: 25%;
   height: 30em;
   border-radius: 2%;
   position: relative;
@@ -139,8 +140,8 @@ body {
   bottom: 0;
   color: white;
   font-family: decoy, serif;
-  font-weight: thin;
   font-style: normal;
+  font-weight: 300;
   padding: 2%;
   text-align: center;
 }
@@ -152,15 +153,46 @@ body {
 }
 
 .bap {
-  background-image: url(src/jspokeapi.JPG);
+  background-image: url(src/binko.JPG);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .devlab {
-  background-image: url(src/jspokeapi.JPG);
+  background-image: url(src/devlab.JPG);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contact p {
+  font-family: decoy, serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 50px;
+  color: #463440;
+  padding-top: 2%;
+}
+.contact .networks_links {
+  display: flex;
+  flex-direction: row;
+}
+.contact .networks_links .far, .contact .networks_links .fab {
+  font-size: 80px;
+  color: #463440;
+  padding: 1em;
+  padding-top: 0;
+}
+.contact .networks_links .far a, .contact .networks_links .fab a {
+  text-decoration: none;
+}
+.contact .networks_links .far:hover, .contact .networks_links .fab:hover {
+  opacity: 0.5;
+  transition-duration: 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */

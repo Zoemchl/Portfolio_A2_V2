@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://use.typekit.net/qjn3jkb.css">
         <link rel="stylesheet" href="https://use.typekit.net/qjn3jkb.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <title>ZM'S PORTFOLIO</title>
     </head>
         <body>
@@ -21,14 +22,14 @@
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="">SKILLS</a></li>
-                            <li><a href="">PROJECT</a></li>
-                            <li><a href="">CONTACT</a></li>
+                            <li><a href="#skills_section">SKILLS</a></li>
+                            <li><a href="#projects_section">PROJECTS</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
                         </ul>
                     </nav>
             </header>
 
-            <section class="skills_section">
+            <section class="skills_section" id="skills_section">
                 <div class="images_scroll">
                     <div class="column_scroll">
                         <a href="#"><img src="src/htmlpng.png" alt="HTML Logo"></a>
@@ -51,18 +52,34 @@
                 </div>
             </section>
 
-            <section class="projects_section">
+            <section class="projects_section" id="projects_section">
                 <div class="thumbnail_project poke">
-                    <p>Reproduction of a pokedex from the famous Pokemon license in CSS and by using the Pokéapi API recovered in JavaScript.</p>
+                    <div class="small_card">
+                        <p>Reproduction of a pokedex from the famous Pokemon license in CSS and by using the Pokéapi API recovered in JavaScript.</p>
+                    </div>
                 </div>
                 <div class="thumbnail_project bap">
-                    <p>Realization of a fundraising website for the company Binko. The technologies used were the following: HTML, CSS, JavaScript, PHP, Stripe.
-                    </p>
+                    <div class="small_card">
+                        <p>Realization of a fundraising website for the company Binko. The technologies used were the following: HTML, CSS, JavaScript, PHP, Stripe.
+                        </p>
+                    </div>
                 </div>
-                <div class="thumbnail_project devlab" >
-                    <p>Design of a registration and appointment platform for school lessons for the association LéoLearning. VueJS and Vuetify are the two technologies that allowed us to realize the project.</p>
+                <div class="thumbnail_project devlab">
+                    <div class="small_card">
+                        <p>Design of a registration and appointment platform for school lessons for the association LéoLearning. VueJS and Vuetify are the two technologies that allowed us to realize the project.</p>
+                    </div>
                 </div>
             </section>
+
+            <section class="contact" id="contact">
+                <p>"Let's work together."</p>
+                <div class="networks_links">
+                    <a href="mailto: zoe.caroline.michel@gmail.com"><i class="far fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/zoe-michel/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Zoemchl"><i class="fab fa-github"></i></a>
+                </div>
+            </section>
+
             <script src="app.js"></script>
         </body>
 </html>
