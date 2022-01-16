@@ -21,6 +21,7 @@ body {
         display: flex;
         justify-content: flex-end;
         height: 100vh;
+        max-width: 100%;
     }
     .level_font{
         position: absolute;
@@ -46,13 +47,14 @@ body {
             font-size: 60px;
             z-index: 2;
             color: #463440;
-            line-height: 70px;
+            line-height: 100px;
             letter-spacing: 10px;
             padding-top: 2%;
         }
     }
     nav{
-        position: absolute;
+        position: fixed;
+        z-index: 1;
         bottom: 0;
         display: flex;
         padding-bottom: 2%;
@@ -68,6 +70,10 @@ body {
                 a{
                     text-decoration: none;
                     color: #8B687F;
+                }
+                a:hover{
+                    color: whitesmoke;
+                    transition-duration: 0.2s;
                 }
             }
         }
@@ -143,7 +149,7 @@ body {
 }
 
 .thumbnail_project{
-    background-color: #8B687F;
+    background-color: #463440;
     width: 25%;
     height: 30em;
     border-radius: 2%;
@@ -211,5 +217,17 @@ body {
             opacity: 0.5;
             transition-duration: 0.3s;
         }
+    }
+}
+
+// .....................RESPONSIVE......................
+
+@media screen and (min-width: 1200px){
+    .contact{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
     }
 }
