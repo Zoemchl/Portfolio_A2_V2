@@ -25,3 +25,18 @@
     column.style.setProperty("height", "200%");
     column.innerHTML = column.innerHTML + column.innerHTML;
 });
+
+
+
+
+var picanim = document.getElementById("pic_anim");
+var pic = document.getElementById("pic");
+
+document.addEventListener('mousemove', event => {
+posX = event.clientX - window.innerWidth/2;
+posY = event.clientY - window.innerHeight/2;
+
+picanim.style.transform = "translate("+posX*0.003+"%, "+posY*0.003+"%)";
+pic.style.transform = "translate("+posX*0.001+"%, "+posY*0.001+"%)";
+});
+
