@@ -1,5 +1,9 @@
 body {
   background-color: #EFD2CB;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: block;
 }
 
 .intro_header {
@@ -11,7 +15,7 @@ body {
   background-position: right;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .intro_header .level_font {
   position: relative;
@@ -43,11 +47,7 @@ body {
 }
 .intro_header nav {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-end;
-  align-content: flex-end;
+  padding-bottom: 2%;
 }
 .intro_header nav ul {
   display: flex;
@@ -63,6 +63,63 @@ body {
 .intro_header nav ul li a {
   text-decoration: none;
   color: #8B687F;
+}
+
+.skills_section {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.images_scroll {
+  display: flex;
+  overflow: hidden;
+  height: 50vw;
+  background: #EFD2CB;
+}
+
+.images_scroll img {
+  max-width: 100%;
+  vertical-align: middle;
+  box-sizing: border-box;
+  transition: opacity 0.2s;
+}
+
+.images_scroll:hover img {
+  opacity: 0.5;
+  cursor: crosshair;
+}
+
+.images_scroll img:hover {
+  opacity: 1;
+}
+
+.images_scroll .column_scroll {
+  animation: var(--animation, none) 16s infinite linear;
+}
+
+.images_scroll .column_scroll:hover {
+  animation-play-state: paused;
+}
+
+.images_scroll .column_scroll:nth-of-type(odd) {
+  align-self: flex-end;
+  --direction: 50%;
+}
+
+@-webkit-keyframes slide {
+  to {
+    -webkit-transform: translateY(var(--direction, -50%));
+    transform: translateY(var(--direction, -50%));
+  }
+}
+@keyframes slide {
+  to {
+    -webkit-transform: translateY(var(--direction, -50%));
+    transform: translateY(var(--direction, -50%));
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

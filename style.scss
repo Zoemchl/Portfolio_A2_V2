@@ -1,6 +1,39 @@
 body {
     background-color: #EFD2CB;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
 }
+
+// .parallax {
+//     &-container {
+//     padding: 2em;
+//     width: 250px;
+//     position: relative;
+//     transform-style: preserve-3d;
+//     cursor: pointer;
+//     }
+//     &-img {
+//     position: relative;
+//     max-width: 100%;
+//     object-fit: cover;
+//     border-radius: 10px;
+//     transform-style: preserve-3d;
+//     }
+//     &-imgShadow {
+//     z-index: 0;
+//     position: absolute;
+//     left: 50%;
+//     top: 50%;         
+//     width: 60%;
+//     transform: translate(-50%, -30%);
+//     object-fit: cover;
+//     filter: blur(20px);
+//     }
+// }
+
+// ......................HEADER......................
 
 .intro_header {
     background-image: url("src/profil_pic_v2.png");
@@ -11,7 +44,7 @@ body {
     background-position: right;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     .level_font{
         position: relative;
         width: 50%;
@@ -42,11 +75,7 @@ body {
     }
     nav{
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: flex-end;
-        align-content: flex-end;
+        padding-bottom: 2%;
         ul{
             display: flex;
             list-style-type: none;
@@ -62,5 +91,64 @@ body {
                 }
             }
         }
+    }
+}
+
+// ......................SKILLS......................
+
+.skills_section{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.images_scroll {
+    display: flex;
+    overflow: hidden;
+    height: 50vw;
+    background: #EFD2CB;
+}
+
+.images_scroll img {
+    max-width: 100%;
+    vertical-align: middle;
+    box-sizing: border-box;
+    transition: opacity 0.2s;
+}
+
+.images_scroll:hover img {
+    opacity: 0.5;
+    cursor: crosshair;
+}
+
+.images_scroll img:hover {
+    opacity: 1;
+}
+
+.images_scroll .column_scroll {
+    animation: var(--animation, none) 16s infinite linear;
+}
+
+.images_scroll .column_scroll:hover {
+    animation-play-state: paused;
+}
+
+.images_scroll .column_scroll:nth-of-type(odd) {
+    align-self: flex-end;
+    --direction: 50%;
+}
+
+@-webkit-keyframes slide {
+    to {
+    -webkit-transform: translateY(var(--direction, -50%));
+    transform: translateY(var(--direction, -50%));
+    }
+}
+@keyframes slide {
+    to {
+    -webkit-transform: translateY(var(--direction, -50%));
+    transform: translateY(var(--direction, -50%));
     }
 }
