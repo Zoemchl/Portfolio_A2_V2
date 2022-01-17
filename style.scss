@@ -21,7 +21,6 @@ body {
         display: flex;
         justify-content: flex-end;
         height: 100vh;
-        max-width: 100%;
     }
     .level_font{
         position: absolute;
@@ -222,12 +221,70 @@ body {
 
 // .....................RESPONSIVE......................
 
-@media screen and (min-width: 1200px){
-    .contact{
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+@media screen and (max-width: 1024px)
+{
+    .intro_header{
+        #pic_anim{
+            .size_pic{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                #pic{
+                    height: 50vh;
+                    width: auto;
+                }
+            }
+        }
+        .level_font{
+            h1, p{
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+        nav{
+            position: fixed;
+            top: 50px;
+            right: 10px;
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                text-align: right;
+                li{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .skills_section{
+        .images_scroll{
+            height: 80%;
+            display: flex;
+            padding-top: 0;
+            box-shadow: none;
+        }
+    }
+    .projects_section{
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
+        .thumbnail_project{
+            width: 100%;
+        }
+        .thumbnail_project.devlab, .thumbnail_project.bap, .thumbnail_project.poke{
+            margin-top: 15%;
+        }
+    }
+    .contact{
+        p{
+            font-size: 25px;
+        }
+        .networks_links{
+            .fab, .far{
+                padding: 0.1em;
+                font-size: 60px;
+                padding-bottom: 30%;
+            }
+        }
     }
 }

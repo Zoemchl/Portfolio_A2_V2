@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #EFD2CB;
   padding: 0;
@@ -20,7 +21,6 @@ body {
   display: flex;
   justify-content: flex-end;
   height: 100vh;
-  max-width: 100%;
 }
 .intro_header .level_font {
   position: absolute;
@@ -208,13 +208,61 @@ body {
   transition-duration: 0.3s;
 }
 
-@media screen and (min-width: 1200px) {
-  .contact {
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+@media screen and (max-width: 1024px) {
+  .intro_header #pic_anim .size_pic {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+  }
+  .intro_header #pic_anim .size_pic #pic {
+    height: 50vh;
+    width: auto;
+  }
+  .intro_header .level_font h1, .intro_header .level_font p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .intro_header nav {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+  }
+  .intro_header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+  }
+  .intro_header nav ul li {
+    font-size: 15px;
+  }
+
+  .skills_section .images_scroll {
+    height: 80%;
+    display: flex;
+    padding-top: 0;
+    box-shadow: none;
+  }
+
+  .projects_section {
+    display: flex;
+    flex-direction: column;
+  }
+  .projects_section .thumbnail_project {
+    width: 100%;
+  }
+  .projects_section .thumbnail_project.devlab, .projects_section .thumbnail_project.bap, .projects_section .thumbnail_project.poke {
+    margin-top: 15%;
+  }
+
+  .contact p {
+    font-size: 25px;
+  }
+  .contact .networks_links .fab, .contact .networks_links .far {
+    padding: 0.1em;
+    font-size: 60px;
+    padding-bottom: 30%;
   }
 }
 
